@@ -1,0 +1,45 @@
+﻿@model IEnumerable<GameLevel>
+
+<div class="container">
+    <div class ="row">
+        <div class="mol-md-12">
+            <h2 class="text-center">GameLevel</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.title)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.description)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modleItem => item.title)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.description)
+                            </td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@item.LevelId">Edit</a>
+                                <a asp-action="Details" asp-route-id="@item.LevelId">Details</a>
+                                <a asp-action="Delete" asp-route-id="@item.LevelId">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <a asp-action="Create" class="btn btnalert-primary">Create Now</a>
+        </div>
+    </div>
+</div>

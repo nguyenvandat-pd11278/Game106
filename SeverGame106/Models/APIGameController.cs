@@ -48,7 +48,6 @@ namespace ServerGame106.Models
                 _response.IsSuccess = true;
                 _response.Notification = "Lay du lieu thanh cong";
                 _response.data = gameLevel;
-                _response.data = gameLevel;
                 return Ok(_response);
             }
             catch (Exception ex)
@@ -568,7 +567,7 @@ namespace ServerGame106.Models
             return new JwtSecurityTokenHandler().WriteToken(token); 
         }
         [HttpGet("GetAllResultByUser/{userId}")]
-        [Authorize]
+       // [Authorize]
         public async Task<IActionResult> GetAllResultByUser(string userId)
         {
             try

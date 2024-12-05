@@ -1,3 +1,9 @@
 ﻿@using SeverGame106
 @using SeverGame106.Models
+
+@using SeverGame106.ViewModel
+@using SeverGame106.DTO
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
